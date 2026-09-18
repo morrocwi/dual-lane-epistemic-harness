@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: >-
+  Please cite the preprint. For the reference implementation, use the software citation below.
+title: Fail Closed for Truth, Open for Imagination — A Dual-Lane Epistemic Control Harness for
+  Generative AI Under Evidence Gaps
+type: software
+version: '0.1.0'
+date-released: '2026-09-18'
+repository-code: 'https://github.com/morrocwi/dual-lane-epistemic-harness'
+url: 'https://github.com/morrocwi/dual-lane-epistemic-harness'
+license: MIT
+authors:
+  - given-names: Yaoharee
+    family-names: Lahtee
+    orcid: 'https://orcid.org/0009-0005-3861-0626'
+    affiliation: Open Civil Science Initiative
+abstract: >-
+  A Dual-Lane Epistemic Harness (DLEH) that separates epistemic authorization from candidate
+  generation for generative AI systems under evidence gaps, grounded in the Toledo Readout Bridge.
+  This repository holds the preprint (v3), an independent reconstruction of the paper's finite-state
+  conformance checker, and a corrections log found during pre-deposit review.
+preferred-citation:
+  type: article
+  title: Fail Closed for Truth, Open for Imagination — A Dual-Lane Epistemic Control Harness for
+    Generative AI Under Evidence Gaps
+  authors:
+    - given-names: Yaoharee
+      family-names: Lahtee
+      orcid: 'https://orcid.org/0009-0005-3861-0626'
+      affiliation: Open Civil Science Initiative
+  year: 2026
+  month: 9
+  notes: >-
+    Preprint, v3, 18 September 2026. Not yet assigned a DOI or arXiv identifier at the time this
+    repository was created; see CHANGELOG.md for the deposit status.

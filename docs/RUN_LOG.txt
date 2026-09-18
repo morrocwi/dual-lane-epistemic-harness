@@ -1,0 +1,8 @@
+python3 --version: Python 3.13.13
+date: 2026-09-18T14:52:23Z
+
+$ python3 dleh_model_check.py --all
+Specification         States   Edges  Violations
+reference                 29      38           0
+imagination-bypass        32      46           4
+lens-bypass               32      44           4
