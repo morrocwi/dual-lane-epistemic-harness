@@ -8,7 +8,9 @@ The following are licensed under the MIT License in `LICENSE`:
 
 - `dleh_model_check.py`
 - `tests/`
-- `Makefile`, `.gitignore`, and other machine-oriented metadata
+- `AGENTS.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, `REPRODUCE.md`, `CITATION.cff`
+- `LICENSE`, `LICENSE-TEXT.md`, `LICENSES.md` (this file) themselves
+- `.gitignore` and other machine-oriented metadata
 
 ## CC BY 4.0
 
@@ -20,4 +22,5 @@ The following are licensed under Creative Commons Attribution 4.0 International 
 - `README.md`
 - `CLAIMS.md`
 
-If a file is not listed in either section, ask before assuming a licence for it.
+Everything not listed under CC BY 4.0 below defaults to the MIT bucket above; there is no
+unlisted file in this repository at the time of writing.

@@ -52,9 +52,11 @@ and their last recorded output).
 
 ## Relation to the rest of the Human-AI Readout Programme
 
-DLEH's lens layer is inherited from `toledo`'s Readout Bridge closure record (S1–S5, the retained
-algebra, the `NEVER` clause, the `ACCEPT`/`HOLD` certificate); no new mathematics is introduced
-there. Its `S_V` verification vocabulary (`Certified` / `Matched` / `Refuted` / `Hold`) is a typed
+DLEH's lens layer is inherited from the programme's Readout Bridge closure record (S1-S5, the
+retained algebra `Alg_Q`, the `NEVER` clause, the `ACCEPT`/`HOLD` certificate) — recorded in
+`toledo`'s `docs/READOUT_BRIDGE_CLOSURE.md`, with the underlying Coq split across `toledo`
+(S3/S5) and `information-discrete-math` (S1, S2, S4); no new mathematics is introduced there
+(`docs/CORRECTIONS.md` C3 has the exact file-by-file citation and its own correction history). Its `S_V` verification vocabulary (`Certified` / `Matched` / `Refuted` / `Hold`) is a typed
 analogue of `readout_universe`'s evidence-tier discipline, applied to a control architecture rather
 than a claim label. Its own new formal apparatus — the declaration/state tuples, invariants I1–I6,
 and Theorem 1 — is `PROPOSAL / not yet in Toledo` (see `docs/CORRECTIONS.md` C3): read them as a

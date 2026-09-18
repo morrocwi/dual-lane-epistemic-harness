@@ -22,6 +22,6 @@ SOFTWARE.
 
 ---
 
-This MIT licence covers the CODE in this repository: `dleh_model_check.py`, `tests/`,
-`Makefile` and machine-oriented metadata. The paper and documentation are licensed
-separately under CC BY 4.0 — see `LICENSE-TEXT.md` and `LICENSES.md`.
+This MIT licence covers the code and machine-oriented files in this repository (see `LICENSES.md`
+for the exact list). The paper and documentation are licensed separately under CC BY 4.0 — see
+`LICENSE-TEXT.md` and `LICENSES.md`.
