@@ -194,3 +194,16 @@ overclaim was found in either check.
 authoring pass) — a cross-vendor or human check has still not run. `paper/main.pdf` (v3) is kept,
 unedited, as the historical record of what was originally delivered; `paper/main_v4.pdf` is the
 version that should actually be submitted.
+
+## C6 — HANDOFF.md briefly leaked a local home-directory path
+
+`HANDOFF.md`, committed at `d73781a`, quoted the founder's request verbatim, which itself named an
+absolute local file path (a home-directory path on the founder's workstation, no credential, no
+secret). This session caught it on its own next action (not via an external or independent check)
+and redacted it at `db6062e`, replacing the quote with a paraphrase and pointing to the private
+glosa Blackbox Note as the record of the actual verbatim text. The commit between the two
+(`d73781a`) remains reachable in git history on the public repository; forward-only fix per this
+workspace's convention (see C4's finding about a similarly-shaped, older leak in `s1c.log`), history
+rewrite is the founder's call. No independent check caught this one — a reminder that self-checking
+before every commit, not only before a "final" push, is the actual discipline this log keeps
+failing at intermittently.
