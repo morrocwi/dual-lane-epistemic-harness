@@ -22,7 +22,8 @@ governed by the Toledo radius and the fail-closed `ACCEPT`/`HOLD` gate.
 
 | Path | What it is |
 |---|---|
-| `paper/main.pdf` | the preprint, as delivered (v3; LaTeX source not held here) |
+| `paper/main_v4.pdf`, `paper/main_v4.tex` | **v4, the current, corrected, camera-ready preprint** (2026-09-19): fixes reference [20]'s blob-hash-as-commit citation, replaces Table 3/Section 15 with the counts of the checker that actually accompanies the paper, and adds an AI-assistance disclosure. Full LaTeX source is held here (v3's was not). See `docs/CORRECTIONS.md` C4/C5 and the paper's own Appendix D for the complete, itemized diff against v3. |
+| `paper/main.pdf` | v3, as originally delivered -- **superseded by v4, kept for the record**; do not submit this version (see C4/C5) |
 | `dleh_model_check.py` | an executable finite-state conformance checker for the reference architecture |
 | `tests/` | guard-level unit tests for the checker (the safety property, not the exact Table 3 counts) |
 | `docs/CONFORMANCE.md` | what the checker confirms, what it does not, and why the counts differ from the paper's Table 3 |

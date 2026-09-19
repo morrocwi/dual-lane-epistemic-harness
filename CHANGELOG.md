@@ -1,5 +1,19 @@
 # Changelog
 
+## [Unreleased] - 2026-09-19 (later same day)
+
+- **v4 of the preprint authored and compiled** (`paper/main_v4.tex`, `paper/main_v4.pdf`; no LaTeX
+  source for v3 existed anywhere in this workspace, so v4 is a complete, faithful re-authoring from
+  v3's own delivered text, not a patch). Fixes both C4 blockers (reference [20]'s citation; Table 3/
+  Section 15's counts, now the checker's real, re-executed output: 29/38/0, 32/46/4, 32/44/4) and
+  adds an AI-assistance disclosure. A second, separate independent check of v4 itself found and
+  this pass fixed two further defects (empty PDF metadata, a duplicated QED mark) and restored
+  seven DOIs an earlier v4 draft had dropped from the bibliography; full account in
+  `docs/CORRECTIONS.md` C5. `paper/main.pdf` (v3) is kept, unedited, as the historical record;
+  **`paper/main_v4.pdf` is the version to submit.** `README.md`/`CLAIMS.md` updated accordingly.
+  Independence class of every check so far: I2 (fresh in-session agents, same model family) — no
+  cross-vendor or human check has occurred.
+
 ## [Unreleased] - 2026-09-19
 
 - `docs/CORRECTIONS.md` C4: the first genuinely independent adversarial check of this repository

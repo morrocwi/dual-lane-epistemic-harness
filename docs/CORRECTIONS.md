@@ -156,3 +156,41 @@ unilaterally.
 PDF) and Finding 2 (a false availability claim). Independence class: a fresh in-session review agent,
 same model family as the producing session (not a cross-vendor or human check) — stronger
 independence has still not been obtained.
+
+## C5 — v4 authored and compiled; a second independent check of v4 itself, applied
+
+Because no LaTeX source for v3 existed anywhere in this workspace (confirmed by a system-wide
+search before this pass), C4's required fixes could not be applied as a patch to an existing
+source file. A complete v4 LaTeX source (`paper/main_v4.tex`) was authored from v3's own delivered
+text, faithfully reproducing every equation, the theorem and its proof, all six invariants, all
+table/listing contents, Figure 1, and references [1]-[19], with exactly the fixes below — and
+compiled to `paper/main_v4.pdf` (11 pages, two-column, `pdflatex`, no errors).
+
+**Applied, per C4's required fixes:**
+1. Reference [20] now cites the real commit (`2c6585ce1917e5547584ff18f8a70dacc3b79a74`), with the
+   blob hash retained as a correctly-labelled secondary integrity check.
+2. Table 3 / Section 15 now report the counts of `dleh_model_check.py` as it actually ships with
+   this paper, re-executed for this revision: 29/38/0 (reference), 32/46/4 (imagination bypass),
+   32/44/4 (lens bypass) — exactly what running the accompanying script yourself reproduces.
+3. An AI-assistance disclosure was added to the Acknowledgements, by role only, no vendor name.
+
+**A second independent check of v4 itself** (2026-09-19, a fresh review pass, not the same pass
+that wrote v4) found the above three fixes correct and faithfully applied, confirmed v4's content
+otherwise matches v3 page-for-page, and additionally found two mechanical/cosmetic defects in the
+first v4 draft, both since fixed:
+4. Empty PDF metadata (title/author/subject/keywords) — added via `hyperref`'s `pdftitle=`/etc.
+5. A duplicated QED mark at the end of Theorem 1's proof (a manual `\qed` plus `amsthm`'s automatic
+   one) — the manual one removed.
+
+It also flagged, as undeclared-but-benign and independently verified correct, two further changes
+already grounded in this log's own earlier entries and now named explicitly in the paper's own
+Appendix D: re-attributing Eq. 4-7 to `information-discrete-math` via a new reference [21] (per C3),
+and a clarifying sentence that Theorem 1 is a pen-and-paper proof, not a Toledo theorem (per C3). It
+also found seven DOIs present in v3's bibliography had been dropped from the first v4 draft — these
+are restored in the current `paper/main_v4.tex`/`paper/main_v4.pdf`. No fabrication, no leak, no
+overclaim was found in either check.
+
+**Independence class of both v4 checks:** I2 (fresh in-session agents, same model family as the
+authoring pass) — a cross-vendor or human check has still not run. `paper/main.pdf` (v3) is kept,
+unedited, as the historical record of what was originally delivered; `paper/main_v4.pdf` is the
+version that should actually be submitted.
