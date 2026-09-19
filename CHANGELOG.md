@@ -1,5 +1,19 @@
 # Changelog
 
+## [Unreleased] - 2026-09-19
+
+- `docs/CORRECTIONS.md` C4: the first genuinely independent adversarial check of this repository
+  (prior passes C1-C3 were all within one ~12-minute, single-identity session, before this
+  repository's public push -- not independent by this workspace's own standard). Findings:
+  (1) reference [20]'s blob-hash-as-commit error, which C1 only drafted a fix for, is **still
+  present in the delivered `paper/main.pdf`** -- the fix was never applied to the actual submission
+  artifact; (2) Section 15's "the finite-state reference checker is supplied as the ancillary file"
+  claim is **not supported** -- no original script producing the paper's printed Table 3 counts
+  exists anywhere searched. `CLAIMS.md` updated accordingly. **Verdict: NOT YET SAFE to submit** the
+  preprint until both are resolved in the author's own LaTeX source. Independence class of this
+  check: I2 (fresh in-session agent, same model family) -- a cross-vendor or human check is still
+  stronger and has not run.
+
 ## [0.1.0] - 2026-09-18
 
 - Initial deposit: preprint v3 (`paper/main.pdf`), an independent reconstruction of the finite-state

@@ -96,3 +96,63 @@ Genesis-compatibility pass is run on them and, if nothing already covers them, t
 with a code and parents. `CLAIMS.md` carries that label explicitly; no other file in this workspace
 should cite Theorem 1 or invariants I1–I6 as an existing Toledo theorem until that pass has
 happened.
+
+## C4 — A genuinely independent adversarial check found that C1's fix was never applied to the PDF, and a new false claim in Section 15
+
+**This is the first genuinely independent check of this repository's own claims.** Passes 1–3 above
+were all conducted within one continuous session in the ~12 minutes between this repository's two
+commits, by one git identity, before the repository was pushed public. Per this workspace's own
+maker-checker standing rule ("no independent check ⇒ no release"), that does not count as an
+independent check, and the repository was pushed public before any check from outside that
+producing session occurred. This section records the first check that was: a fresh review pass,
+re-deriving every factual claim from primary sources rather than trusting `CLAIMS.md`/`CORRECTIONS.md`'s
+own narrative, run against the actual delivered `paper/main.pdf` via `pdftotext` extraction, live
+`git` commands against the real `toledo`/`information-discrete-math` checkouts, and a live re-run
+of `dleh_model_check.py` and `pytest`.
+
+**Finding 1 — C1's fix was never applied to the actual PDF.** The delivered `paper/main.pdf` (v3,
+despite the filename `..._toledo_fixed.pdf`) still literally reads, at reference [20]:
+> commit `7de62699743054b3ad8dd16c993899f488548541`
+
+which is confirmed (again, independently) to be a git **blob** hash, not a commit. C1 above only
+*proposed* corrected citation text for a future revision; it was never applied to the LaTeX source
+this PDF was compiled from (which this repository does not hold). **The paper as it stands still
+carries the citation error C1 found.** This must be fixed in the author's own LaTeX source before
+any v4 is compiled, not merely logged here.
+
+**Finding 2 — Section 15's code-availability claim is false as things currently stand.** The paper's
+own Section 15 states as settled fact: "Code availability. The finite-state reference checker is
+supplied as the ancillary file `dleh_model_check.py` in the accompanying source bundle." But per
+C2/`docs/CONFORMANCE.md` (independently re-confirmed in this pass — a system-wide search for a
+second implementation, `find / -iname "dleh_model_check.py"` outside `/proc`, finds only the one
+file in *this* repository, which is a post-hoc reconstruction, not the author's original script):
+no original `dleh_model_check.py` producing the paper's printed Table 3 counts (22/44/0, 24/48/3,
+24/46/1) exists anywhere on this machine. Either the real arXiv source bundle genuinely contains a
+different, original script that never reached any review in this workspace (possible, not
+verifiable here), or Section 15 is currently making a claim about an artifact that does not exist.
+**This must be resolved by the author before submission** — either supply the real original script
+(and have it independently re-run to confirm the printed counts), or rewrite Section 15 and Table 3
+to disclose plainly that the printed counts are an unreproduced prior run and the checker
+accompanying the paper is a post-hoc reconstruction confirming only the qualitative safety property.
+
+**What this pass reproduced and confirms (no change needed).** Eq. 2–11's Toledo/`information-discrete-math`
+source attribution (pass 3's conclusion): confirmed correct by reading the actual `.v` files
+directly (`InAlg`/`roundtrip_exact_iff` in `IDM_SignatureFunctor.v`, `roundtrip_never`/
+`roundtrip_never_total` in `IDM_BridgeRoundTrip.v`, `plateau_certificate`/`plateau_radius` in
+`IDM_ReadoutTower.v`, the S3/S5 objects in `toledo/coq/canonical/PROP_BRIDGE_03_certified_radius.v`).
+No AI/vendor attribution anywhere (commits, PDF text). No leak of local paths, usernames, internal
+tool names, or private repository names anywhere in this repository. The paper's own honesty about
+Theorem 1 being a pen-and-paper proof, not Coq-checked, and about reporting no LLM benchmark: both
+confirmed accurate as printed.
+
+**Open judgment call, not resolved by this pass.** This workspace has a standing rule (2026-09-07)
+that a "Core Epistemic Structure" disclosure block (Core Respondent/Experience-Based Expert;
+Interactional Expert or None; AI Model(s) Used, by role) is mandatory on "every draft." This preprint
+carries no such block. Whether that rule extends to an external, arXiv-bound preprint (as opposed to
+an internal workspace document) is for the founder to decide, not for this repository to resolve
+unilaterally.
+
+**Verdict of this pass: NOT YET SAFE to submit.** Blocking: Finding 1 (unfixed citation still in the
+PDF) and Finding 2 (a false availability claim). Independence class: a fresh in-session review agent,
+same model family as the producing session (not a cross-vendor or human check) — stronger
+independence has still not been obtained.
