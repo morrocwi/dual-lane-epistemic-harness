@@ -1,9 +1,12 @@
 # Handoff — DLEH preprint check, v4 authoring, and project close (2026-09-19)
 
-**Founder's request (verbatim, across two turns):**
-> '/home/yaoharee-lt/Downloads/DLEH_Fail_Closed_Open_Imagination_arXiv_v3_toledo_fixed.pdf' ่เอาเข้า glosa หน่อย ตรวจ และอัพเดก่อนลงจริง /model fable
-> นายตัดสินใจ ใช้สองแกน ระดับโลก adversarial camera ready ทำได้เลย
-> handoff สถานะล่าสุดและปิดโครงการ
+**Founder's request (paraphrased; the verbatim line named a local file path on the founder's own
+machine, redacted here per this workspace's publish-safety rule — the full verbatim text is kept
+privately in the glosa Blackbox Note referenced below, which is not committed to any public repo):**
+> [a local copy of the v3 preprint PDF] — bring it into glosa, check it, and update it before real
+> publication.
+> You decide. Use two axes: world-class, adversarial-camera-ready. Go ahead.
+> Write a handoff of the latest status and close the project.
 
 Translation of intent: bring the preprint into glosa's process, check it, and update it before real
 publication; the AI was delegated the two open judgment calls under two axes — world-class rigor and
